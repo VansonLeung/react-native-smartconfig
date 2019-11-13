@@ -1,6 +1,6 @@
 {
   "name": "react-native-smartconfig",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "react-native ESP8266 smartconfig module",
   "nativePackage": true,
   "scripts": {
@@ -18,5 +18,14 @@
     "esptouch",
     "airkiss"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahientn9x/react-native-smartconfig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bahientn9x/react-native-smartconfig/issues"
+  },
+  "homepage": "https://github.com/bahientn9x/react-native-smartconfig#readme"
 }
