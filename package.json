@@ -1,6 +1,6 @@
 {
   "name": "react-native-smartconfig-3",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "react-native ESP8266 smartconfig module",
   "nativePackage": true,
   "scripts": {

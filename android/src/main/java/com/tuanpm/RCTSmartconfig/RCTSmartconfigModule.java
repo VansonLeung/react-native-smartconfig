@@ -152,9 +152,9 @@ public class RCTSmartconfigModule extends ReactContextBaseJavaModule {
           String apPassword = params[2];
           Log.d(TAG, apSsid + " | " + apBssid + " | " + apPassword);
           String taskCountStr = params[3];
-          String timeout = params[4];
+          String timeoutStr = params[4];
           taskCount = Integer.parseInt(taskCountStr);
-          timeout = Integer.parseInt(timeout);
+          timeout = Integer.parseInt(timeoutStr);
           mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword, timeout, getCurrentActivity());
         }
         List<IEsptouchResult> resultList = mEsptouchTask.executeForResults(taskCount);
