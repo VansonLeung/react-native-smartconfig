@@ -4,84 +4,38 @@
 
 [react-native](https://github.com/facebook/react-native) module for [ESP8266 ESPTOUCH Smart config](https://github.com/EspressifApp)
 
-> Disclaimer: Modified by Avispatech for internal purposes only.
+> Disclaimer: Modified by Ba Hien for internal purposes only.
 
 ## Featues
 * Support both IOS and Android
 * React Native Promise support
 * Fast way to do configure wifi network for IOT device
+* Support count device search
+* Support timeout
 
 ## Getting started
 ### Mostly automatic install
-1. `npm install react-native-smartconfig@latest --save`
+1. `yarn add react-native-smartconfig-3` (`npm install react-native-smartconfig-3@latest --save`)
 2. Add this to your podfile: 
    ```
     pod 'Smartconfig',
-    :podspec => '../node_modules/react-native-smartconfig/react-native-smartconfig.podspec'
+    :podspec => '../node_modules/react-native-smartconfig-3/react-native-smartconfig.podspec'
    ```
-3. Install your pods normally (`pod install` inside iOS directory)
-
-### Manual install
-#### iOS
-- `npm install react-native-smartconfig@latest --save`
--  In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-- Go to `node_modules` ➜ `react-native-smartconfig` and add `RCTSmartconfig.xcodeproj`
-- In XCode, in the project navigator, select your project. Add `libRCTSmartconfig.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-- Click `RCTSmartconfig.xcodeproj` in the project navigator and go the `Build Settings` tab. Make sure 'All' is toggled on (instead of 'Basic'). In the `Search Paths` section, look for `Header Search Paths` and make sure it contains both `$(SRCROOT)/../../react-native/React` - mark  as `recursive`.
-- Run your project (`Cmd+R`)
-
-
-#### Android
-
--  `npm install react-native-smartconfig@latest --save`
--  For older version.  Modify the ReactInstanceManager.builder() calls chain in `android/app/main/java/.../MainActivity.java` to include:
-
-```javascript
-import com.tuanpm.RCTSmartconfig; // import for older version
-
-.addPackage(new RCTSmartconfigPackage()) //for older version
-```
--  For newest version.  Modify the ReactInstanceManager.builder() calls chain in `android/app/main/java/.../MainApplication.java` to include:
-```javascript
-import com.tuanpm.RCTSmartconfig.RCTSmartconfigPackage; // import for newest version of react-native
-
-new RCTSmartconfigPackage()           // for newest version of react-native
-```
-
--  Append the following lines to `android/settings.gradle` before `include ':app'`:
-
-```
-include ':react-native-smartconfig'
-project(':react-native-smartconfig').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-smartconfig/android')
-```
-
-- Insert the following lines inside the dependencies block in `android/app/build.gradle`, dont missing `apply plugin:'java'` on top:
-
-```
-compile project(':react-native-smartconfig')
-```
-
-Notes:
-
-```
-dependencies {
-  compile project(':react-native-smartconfig')
-}
-```
-
+3. Install your pods normally (`pod install` & `pod update` inside iOS directory)
 
 
 ## Usage
 
 ```javascript
-import Smartconfig from 'react-native-smartconfig';
+import Smartconfig from 'react-native-smartconfig-3';
 
 Smartconfig.start({
   type: 'esptouch', //or airkiss, now doesn't not effect
   ssid: 'wifi-network-ssid',
   bssid: 'filter-device', //"" if not need to filter (don't use null)
   password: 'wifi-password',
-  timeout: 50000 //now doesn't not effect
+  timeout: 50000 //now support (default 30000)
+  taskCount: 1 // now support (default 1)
 }).then(function(results){
   //Array of device success do smartconfig
   console.log(results);
@@ -106,7 +60,6 @@ Smartconfig.stop(); //interrupt task
 ## Todo
 
 * [ ] Support automatic get current wifi network ssid
-* [ ] Set timeout effect
 * [ ] Support airkiss
 
 ## LICENSE
