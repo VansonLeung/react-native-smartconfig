@@ -1,12 +1,12 @@
 {
-  "name": "react-native-smartconfig-3",
-  "version": "0.3.3",
+  "name": "react-native-smartconfig-esp",
+  "version": "1.0.1",
   "description": "react-native ESP8266 smartconfig module",
   "nativePackage": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "<Tuan PM> tuanpm@live.com",
+  "author": "<Luca Druda> lucadruda@gmail.com",
   "license": "MIT",
   "keywords": [
     "react-native",
@@ -22,10 +22,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bahientn9x/react-native-smartconfig.git"
+    "url": "git+https://github.com/lucadruda/react-native-smartconfig.git"
   },
   "bugs": {
-    "url": "https://github.com/bahientn9x/react-native-smartconfig/issues"
+    "url": "https://github.com/lucadruda/react-native-smartconfig/issues"
   },
-  "homepage": "https://github.com/bahientn9x/react-native-smartconfig#readme"
+  "homepage": "https://github.com/lucadruda/react-native-smartconfig#readme"
 }

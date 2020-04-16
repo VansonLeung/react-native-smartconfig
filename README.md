@@ -4,7 +4,7 @@
 
 [react-native](https://github.com/facebook/react-native) module for [ESP8266 ESPTOUCH Smart config](https://github.com/EspressifApp)
 
-> Modified by Ba Hien for internal purposes only.
+> Modified by Luca Druda for internal purposes only.
 
 ## Featues
 * Support both IOS and Android
@@ -15,18 +15,18 @@
 
 ## Getting started
 ### Mostly automatic install
-1. yarn add react-native-smartconfig-3 (npm install react-native-smartconfig-3@latest --save)
+1. yarn add react-native-smartconfig-esp (npm install react-native-smartconfig-esp@latest --save)
 2. Add this to your podfile: 
    ```
     pod 'Smartconfig',
-    :podspec => '../node_modules/react-native-smartconfig-3/react-native-smartconfig.podspec'
+    :podspec => '../node_modules/react-native-smartconfig-esp/react-native-smartconfig.podspec'
    ```
 3. Install your pods normally (`pod install` & `pod update `inside iOS directory)
 
 ## Usage
 
 ```javascript
-import Smartconfig from 'react-native-smartconfig-3';
+import Smartconfig from 'react-native-smartconfig-esp';
 
 Smartconfig.start({
   type: 'esptouch', //or airkiss, now doesn't not effect
