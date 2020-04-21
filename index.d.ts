@@ -5,7 +5,7 @@ declare module 'react-native-smartconfig-esp' {
         password: string,
         bssid?: string,
         timeout?: number
-    }): Promise<string>;
+    }): Promise<any[]>;
 
     function stop(): void;
 }
